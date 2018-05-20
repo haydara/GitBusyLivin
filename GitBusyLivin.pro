@@ -8,7 +8,7 @@ QT       += core gui network svg
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = GitBusyLivin
+TARGET = gitbusylivin
 TEMPLATE = app
 
 QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.13

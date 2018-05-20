@@ -1,0 +1,2 @@
+?package(gitbusylivin):needs="X11" section="Applications/Development"\
+  title="Git Busy Livin" command="/usr/bin/gitbusylivin"

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Git Busy Livin
+Comment=A Qt git client using libgit2
+Exec=gitbusylivin
+Icon=gitbusylivin.png
+Terminal=false
+Categories=Development;RevisionControl;
+X-KDE-SubstituteUID=false
+

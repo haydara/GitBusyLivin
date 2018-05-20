@@ -1,0 +1,15 @@
+Source:			gitbusylivin
+Section:		utils
+Priority:		optional
+Maintainer:		Haydar Alkaduhimi <haydr@hosting4all.com>
+Build-Depends:		debhelper (>= 10)
+Standards-Version:	4.1.2
+Homepage:		https://github.com/Evolke/GitBusyLivin
+Vcs-Git:		https://github.com/Evolke/GitBusyLivin.git
+Vcs-Browser:		https://github.com/Evolke/GitBusyLivin.git
+
+Package:		gitbusylivin
+Architecture:		any
+Depends:		${shlibs:Depends}, ${misc:Depends}
+Description:		A Qt git client using libgit2
+ GitBusyLivin is a Qt git client using libgit2
