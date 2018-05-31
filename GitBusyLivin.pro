@@ -113,9 +113,49 @@ macx {
 }
 
 !macx {
-unix {
+  unix {
     LIBS += -lgit2
-}
+
+    #VARIABLES
+    isEmpty(PREFIX) {
+      PREFIX = /usr
+    }
+    BINDIR = $$PREFIX/bin
+    DATADIR =$$PREFIX/share
+
+    DEFINES += DATADIR=\\\"$$DATADIR\\\" PKGDATADIR=\\\"$$PKGDATADIR\\\"
+
+    #MAKE INSTALL
+    INSTALLS += target desktop service icons16 icons32 icons64 icons128 icons256 icons512 mans
+    target.path =$$BINDIR
+
+    desktop.path = $$DATADIR/applications
+    desktop.files += $${TARGET}.desktop
+
+    service.path = $$DATADIR/dbus-1/services
+    service.files += $${TARGET}.service
+
+    icons16.path = $$DATADIR/icons/hicolor/16x16/apps
+    icons16.files += ../debian/icons/16x16/apps/$${TARGET}.png
+
+    icons32.path = $$DATADIR/icons/hicolor/32x32/apps
+    icons32.files += ../debian/icons/32x32/apps/$${TARGET}.png
+
+    icons64.path = $$DATADIR/icons/hicolor/64x64/apps
+    icons64.files += ../debian/icons/64x64/apps/$${TARGET}.png
+
+    icons128.path = $$DATADIR/icons/hicolor/128x128/apps
+    icons128.files += ../debian/icons/128x128/apps/$${TARGET}.png
+
+    icons256.path = $$DATADIR/icons/hicolor/256x256/apps
+    icons258.files += ../debian/icons/256x256/apps/$${TARGET}.png
+
+    icons512.path = $$DATADIR/icons/hicolor/512x512/apps
+    icons.files += ../debian/icons/512x512/apps/$${TARGET}.png
+
+    mans.files += ../debian/gitbusylivin.1
+    mans.path = $$DATADIR/man/man1
+  }
 }
 
 RC_ICONS = resources/images/gitbusylivin.ico
